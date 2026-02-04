@@ -1,8 +1,10 @@
 /*
-
+implementacion de patron modulo
 */
-
-//creacion de deck
+//funcion anonima autoinvocada
+(() => {
+    'use strict'  //modo estricto a~la hora de evaluar codigo
+    //creacion de deck
 let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
 const especiales = ['A', 'J', 'Q', 'K'];
@@ -42,7 +44,7 @@ const crearDeck = () => {
         [deck[i], deck[j]] = [deck[j], deck[i]];
     }
     
-    console.log(deck);
+    // console.log(deck);
     return deck;
 }
 
@@ -161,4 +163,7 @@ btnNuevo.addEventListener('click', () => {
 
 
 });
+
+})();
+
 
